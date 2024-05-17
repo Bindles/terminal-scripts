@@ -1,0 +1,2 @@
+nickinside
+new_string

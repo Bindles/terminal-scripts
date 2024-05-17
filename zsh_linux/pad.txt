@@ -1,0 +1,3 @@
+hi
+t|txt) ext=".txt";; h|html) ext=".html";; he|htmlerb|html_erb) ext=".html.erb";; r|rb|ruby) ext=".rb";; j|js) ext=".js";; p|py|python) ext=".py";; m|md) ext=".md";; cs|css) ext=".css";; s|scss) ext=".scss";;
+t|txt) ext=".txt";; h|html) ext=".html";; he|htmlerb|html_erb) ext=".html.erb";; r|rb|ruby) ext=".rb";; j|js) ext=".js";; p|py|python) ext=".py";; m|md) ext=".md";; cs|css) ext=".css";; s|scss) ext=".scss";;

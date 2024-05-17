@@ -1,0 +1,7 @@
+Command List:
+mov directory: mv [source directory] [destination directory]
+with variable dir" mv xclip $dcust
+rmdir with contents: rm -rf myDirectory
+rmdir -r: remove folder and components
+ls -la: ls vertically'
+[A[Brm -r dir : remove dir and contents

@@ -1,0 +1,29 @@
+#!/bin/bash
+#commands" string
+a="COMMANDS"
+#commands.length
+#b=$(echo ${#ZARRAY[@]})
+#((b--))
+b=$(( ${#ZARRAY[@]} - 1 ))
+#b=$(echo ${#ZARRAY[1]}-1 | bc)
+#b=$((${#ZARRAY[1]} - 1))
+# Array pretending to be a Pythonic dictionary
+ZARRAY=( "$a:$b"
+        "dinosaur:roar"
+        "bird:chirp"
+        "bash:rock" 
+	"rmdir -r:remove folder and components"
+	"ls -la:ls vertically" )
+
+# Sort the array by key length in descending order
+sorted_array=($(printf "%s\n" "${ZARRAY[@]}" | awk -F: '{print length($1) ":" $0}' | sort -nr | cut -d: -f2-))
+
+#b=echo "[COMMANDS]: ( ${#ZARRAY[@]} found)"
+
+for animal in "${ZARRAY[@]}" ; do
+    KEY="${animal%%:*}"
+    VALUE="${animal##*:}"
+    KEY_LENGTH=${#KEY}
+    SPACES=$(printf "%*s" $((${#sorted_array[1]%%:*} - ${KEY_LENGTH})))
+    printf " %s %s| %s\n" "$KEY" "$SPACES" "$VALUE"
+done
